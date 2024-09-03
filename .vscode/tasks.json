@@ -6,7 +6,15 @@
         {
             "label": "latex clean force",
             "type": "shell",
-            "command": "remove-item -path $(join-path -path $(pwd).path -childpath 'output\\*) -force"
+            "windows": {
+                "command": "remove-item -path $(join-path -path $(pwd).path -childpath '.\\output\\*') -force"
+            },
+            "presentation": {
+                "reveal": "never",
+                "focus": false,
+                "clear": true
+            },
+            "problemMatcher": []
         }
     ]
 }
