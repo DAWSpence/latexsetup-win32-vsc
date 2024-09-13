@@ -4,15 +4,17 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "latex clean force",
+            "label": "latexrm",
             "type": "shell",
-            "windows": {
-                "command": "remove-item -path $(join-path -path $(pwd).path -childpath '.\\output\\*') -force"
+            "windows":{
+                "command": "get-item -path $(join-path -path (Get-Location).path -childpath .\\output\\*) | remove-item -force"
             },
+
             "presentation": {
-                "reveal": "never",
+                "reveal": "silent",
                 "focus": false,
-                "clear": true
+                "clear": true,
+                "echo": false
             },
             "problemMatcher": []
         }

@@ -1,0 +1,28 @@
+{
+    //https://github.com/James-Yu/LaTeX-Workshop
+
+    //==LATEX==
+        "latex-workshop.latex.autoBuild.run": "never",
+        "latex-workshop.latex.clean.method": "glob",
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.linting.chktex.enabled": true,
+        "latex-workshop.latex.outDir": "%DIR%\\output",
+
+
+
+    "latex-workshop.latex.tools": [
+    {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+        ],
+        "env": {}
+    },
+    ],
+}
