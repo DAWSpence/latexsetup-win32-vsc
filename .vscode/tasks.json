@@ -7,7 +7,7 @@
             "label": "latexrm",
             "type": "shell",
             "windows":{
-                "command": "get-item -path $(join-path -path (Get-Location).path -childpath .\\output\\*) | remove-item -force"
+                "command": "get-item -path $(join-path -path (Get-Location).path -childpath .\\output\\*) | remove-item -force -recurse"
             },
 
             "presentation": {

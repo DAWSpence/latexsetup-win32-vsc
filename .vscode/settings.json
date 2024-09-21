@@ -7,6 +7,7 @@
         "latex-workshop.latex.clean.subfolder.enabled": true,
         "latex-workshop.linting.chktex.enabled": true,
         "latex-workshop.latex.outDir": "%DIR%\\output",
+        "latex-workshop.latex.clean.fileTypes": ["*.*"],
 
 
 
