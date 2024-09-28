@@ -25,12 +25,12 @@
 
     "power": {
     "prefix": "rp",
-    "body": ["$0^{}"]
+    "body": ["$0^{$1}"]
   },
 
     "underscore": {
     "prefix": "_",
-    "body": ["$0_{}"]
+    "body": ["$0_{$1}"]
   },
 
     "square root": {
@@ -68,22 +68,6 @@
     "body": ["\\underline{$0}"]
   },
 
-
-    "underbrace": {
-    "prefix": "xunb",
-    "body": ["\\underbrace{$2}_{$1}^{$0}"]
-  },
-
-    "begin statement": {
-    "prefix": "begin",
-    "body": [ "\\begin{$1}", 
-
-                      "$0", 
-
-              "\\end{$1}"]
-  },
-
-
     "e power": {
     "prefix": "ee",
     "body": ["e^{$0}"]
@@ -99,18 +83,44 @@
     "body": ["\\frac{$1}{$0}"]
   },
 
-    "faction_paren": {
-    "prefix": "pfrac",
-    "body": ["\\left(frac{$1}{$0}\\right)"]
+    "begin": {
+    "prefix": "begin",
+    "body": ["\\begin{$1}",
+                  "$0",
+             "\\end{$1}"]
   },
 
-    "balanced paren": {
-    "prefix": "paren",
-    "body": ["\\left($0 \\right)"]
+
+   "begin": {
+    "prefix": "sizefracp",
+    "body": ["\left(\frac{$1}{$0}\right)"]
   },
+
+
+  "begin": {
+    "prefix": "sizefracb",
+    "body": ["\left[\frac{$1}{$0}\right]"]
+  },
+
+
+"begin": {
+    "prefix": "sizeb",
+    "body": ["\left[$0 \right]"]
+  },
+
+
+"begin": {
+    "prefix": "sizep",
+    "body": ["\left($0 \right)"]
+  },
+
+
 
 
   //greek letters
+
+
+
     "alpha": {
     "prefix": "alp",
     "body": ["\\alpha"]
